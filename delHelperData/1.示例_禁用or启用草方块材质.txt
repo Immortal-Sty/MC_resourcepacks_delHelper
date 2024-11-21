@@ -1,0 +1,7 @@
+// 这里是注释，以“//”开头的行都是注释，不支持缩进
+// 注释里想写啥写啥，不影响功能
+// 本文件为示例文件，仅用于讲解
+
+assets\minecraft\blockstates\grass_block.json
+// 上面是草方块的文件路径，每个材质包路径都各有不同，大家按实际情况添加，不要直接抄。
+// 执行一次后会将 grass_block.json 改成 grass_block.disabled，再次执行则改回来。
