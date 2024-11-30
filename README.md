@@ -15,3 +15,7 @@
 该脚本最开始由“梧桐材质”群中的群友——Cbscfe 写出，由我进行修改（其实内里几乎全改了，已经是我的形状了，桀桀桀桀 #手动狗头）。
 
 ***注意！！！本脚本不需要懂代码，但至少要会一点点材质包的修改方法！***
+
+## 友链
+
+[LIBPS/disable_helper](https://github.com/LIBPS/disable_helper)：Cbscfe 写的 Python 版，有打包 `.exe` 可执行文件，可在不安装 Python 的情况下直接运行。
