@@ -139,6 +139,7 @@ if EXIST pack.mcmeta (
                 rem ↓此处为以防万一
                 ) else (
                     echo 出问题了
+                    echo num_c=!num_c!
                     pause > nul
                     goto end
                 )
