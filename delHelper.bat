@@ -1,35 +1,35 @@
 @ECHO OFF
 COLOR 5
-TITLE ½ûÓÃÖúÊÖ
+TITLE ç¦ç”¨åŠ©æ‰‹
 setlocal enabledelayedexpansion
 
-rem ¼ÆËã¡°µ±Ç°ËùÔÚÂ·¾¶¡±×Ö·û´®µÄ³¤¶È
+rem è®¡ç®—â€œå½“å‰æ‰€åœ¨è·¯å¾„â€å­—ç¬¦ä¸²çš„é•¿åº¦
 set countStr=%cd%
 call :fun_counting
-rem ¼Ó 1£¬×÷Îªµ±Ç°ÎÄ¼ş¼ĞÂ·¾¶×Ö·û´®³¤¶È£¬ÒòÎª»¹ÓĞ¸ö¡°\¡±
+rem åŠ  1ï¼Œä½œä¸ºå½“å‰æ–‡ä»¶å¤¹è·¯å¾„å­—ç¬¦ä¸²é•¿åº¦ï¼Œå› ä¸ºè¿˜æœ‰ä¸ªâ€œ\â€
 set /a countOfPath_=!count!+1
-rem ¼Ó 10£¬×÷Îª data ÎÄ¼ş¼ĞÂ·¾¶×Ö·û´®³¤¶È
+rem åŠ  10ï¼Œä½œä¸º data æ–‡ä»¶å¤¹è·¯å¾„å­—ç¬¦ä¸²é•¿åº¦
 set /a countOfPath=!count!+15
 
-rem ÕıÊ½ÔËĞĞ
+rem æ­£å¼è¿è¡Œ
 if EXIST pack.mcmeta (
     :mainSurface
-    rem ÏÔÊ¾Ñ¡ÏîÓë½çÃæ
+    rem æ˜¾ç¤ºé€‰é¡¹ä¸ç•Œé¢
     cls
-    echo ½ûÓÃÖúÊÖ
-    echo LIBÁÙÊ±¹¤×÷ÊÒ³öÆ·
-    echo ˜^(m¨¦i^)Í·ÄÔ ĞŞ¸Ä°æ
+    echo ç¦ç”¨åŠ©æ‰‹
+    echo LIBä¸´æ—¶å·¥ä½œå®¤å‡ºå“
+    echo æ§‘^(mÃ©i^)å¤´è„‘ ä¿®æ”¹ç‰ˆ
     echo ---
-    echo Ê¹ÓÃ·½·¨
-    echo ÊäÈë¹¦ÄÜÇ°ÃæµÄÊı×ÖÔÙ°´»Ø³µ
+    echo ä½¿ç”¨æ–¹æ³•
+    echo è¾“å…¥åŠŸèƒ½å‰é¢çš„æ•°å­—å†æŒ‰å›è½¦
     echo ---
-    echo ¹¦ÄÜÁĞ±í
+    echo åŠŸèƒ½åˆ—è¡¨
 
-    rem ½«¡°.\delHelperData¡±ÎÄ¼ş¼ĞÄÚµÄËùÓĞÎÄ¼ş×÷ÎªÑ¡ÏîÏÔÊ¾³öÀ´
+    rem å°†â€œ.\delHelperDataâ€æ–‡ä»¶å¤¹å†…çš„æ‰€æœ‰æ–‡ä»¶ä½œä¸ºé€‰é¡¹æ˜¾ç¤ºå‡ºæ¥
     for /r ".\delHelperData" %%i in (*.txt) do (
         set pathOfMe=%%i
 
-        rem ÓÃ for Ñ­»·É¾³ıÂ·¾¶£¬±£ÁôÎÄ¼şÃû
+        rem ç”¨ for å¾ªç¯åˆ é™¤è·¯å¾„ï¼Œä¿ç•™æ–‡ä»¶å
         for /l %%j in (1,1,!countOfPath!) do (
             set pathOfMe=!pathOfMe:~1!
         )
@@ -37,84 +37,84 @@ if EXIST pack.mcmeta (
         echo !pathOfMe!
     )
 
-    echo 0.ÍË³ö
+    echo 0.é€€å‡º
     echo ---
 
-    rem µÈ´ıÊäÈë
-    set cont=É¶Ò²Ã»ÓĞ
+    rem ç­‰å¾…è¾“å…¥
+    set cont=å•¥ä¹Ÿæ²¡æœ‰
     set /p cont=^>
 
-    rem ¼ÆËãÊäÈë×Ö·û³¤¶È
+    rem è®¡ç®—è¾“å…¥å­—ç¬¦é•¿åº¦
     set countStr=!cont!
     call :fun_counting
     set /a countOfCont=!count!
 
     echo ---
 
-    rem ¡ıÈç¹ûÎª¡°0¡±£¬ÔòÍË³ö
+    rem â†“å¦‚æœä¸ºâ€œ0â€ï¼Œåˆ™é€€å‡º
     if '!cont!' == '0' (
         goto end
-    rem ¡ıÈç¹ûÎª¡°É¶Ò²Ã»ÓĞ¡±£¬ÔòÌáÊ¾²¢ÖØÀ´
-    ) else if '!cont!' == 'É¶Ò²Ã»ÓĞ' (
-        echo ÇëÊäÈëÊı×Ö
+    rem â†“å¦‚æœä¸ºâ€œå•¥ä¹Ÿæ²¡æœ‰â€ï¼Œåˆ™æç¤ºå¹¶é‡æ¥
+    ) else if '!cont!' == 'å•¥ä¹Ÿæ²¡æœ‰' (
+        echo è¯·è¾“å…¥æ•°å­—
         pause > nul
         goto mainSurface
-    rem ¡ı·ñÔòÅĞ¶ÏÑ¡Ïî
+    rem â†“å¦åˆ™åˆ¤æ–­é€‰é¡¹
     ) else (
-        rem ÒÀ´Î¶Ô±ÈÑ¡ÏîÓëÎÄ¼ş
+        rem ä¾æ¬¡å¯¹æ¯”é€‰é¡¹ä¸æ–‡ä»¶
         for /r ".\delHelperData" %%i in (*.txt) do (
-            rem É¾³ıÂ·¾¶£¬±£ÁôÎÄ¼şÃû
+            rem åˆ é™¤è·¯å¾„ï¼Œä¿ç•™æ–‡ä»¶å
             set pathOfMe=%%i
             for /l %%j in (1,1,!countOfPath!) do (
                 set pathOfMe=!pathOfMe:~1!
             )
 
-            rem µ÷ÓÃ fun_strHead º¯Êı£¨ÔÚ×îÏÂÃæ£©£¬½øĞĞÅĞ¶Ï
+            rem è°ƒç”¨ fun_strHead å‡½æ•°ï¼ˆåœ¨æœ€ä¸‹é¢ï¼‰ï¼Œè¿›è¡Œåˆ¤æ–­
             set strl=!pathOfMe!
             set strs=!cont!
             call :fun_strHead
             set success=!isHead!
 
-            rem Èç¹ûÕÒµ½¶ÔÓ¦ÎÄ¼ş£¬ÔòÏÂÒ»²½
+            rem å¦‚æœæ‰¾åˆ°å¯¹åº”æ–‡ä»¶ï¼Œåˆ™ä¸‹ä¸€æ­¥
             if '!success!' == '1' (
                 set filepath=%%i
 
-                rem É¾³ı¾ø¶ÔÂ·¾¶£¬×ªÎªÏà¶ÔÂ·¾¶£¨ÎªÁË·ÀÖ¹¾ø¶ÔÂ·¾¶ÓĞ¿Õ¸ñ£©
+                rem åˆ é™¤ç»å¯¹è·¯å¾„ï¼Œè½¬ä¸ºç›¸å¯¹è·¯å¾„ï¼ˆä¸ºäº†é˜²æ­¢ç»å¯¹è·¯å¾„æœ‰ç©ºæ ¼ï¼‰
                 for /l %%j in (1,1,!countOfPath_!) do (
                     set filepath=!filepath:~1!
                 )
                 set filepath=.\!filepath!
 
-                rem ¶ÁÈ¡ txt ÎÄ¼şÄÚÈİ£¬»ñÈ¡ json ÎÄ¼şÂ·¾¶
+                rem è¯»å– txt æ–‡ä»¶å†…å®¹ï¼Œè·å– json æ–‡ä»¶è·¯å¾„
                 set num_c=0
                 for /f %%j in (!filepath!) do (
-                    rem µ±ÒÔ¡°//¡±¿ªÍ·Ê±£¬ÊÓÎª×¢ÊÍ£¬²»Óè´¦Àí
+                    rem å½“ä»¥â€œ//â€å¼€å¤´æ—¶ï¼Œè§†ä¸ºæ³¨é‡Šï¼Œä¸äºˆå¤„ç†
                     set strl=%%j
                     set strs=//
                     call :fun_strHead
                     set isComment=!isHead!
                     if not '!isComment!'=='1' (
 
-                        rem ¿ªÆô×´Ì¬£¨enable£©Ê±£¬Ê¹ÓÃ¸Ã±äÁ¿£¬ºó×ºÎª .json
+                        rem å¼€å¯çŠ¶æ€ï¼ˆenableï¼‰æ—¶ï¼Œä½¿ç”¨è¯¥å˜é‡ï¼Œåç¼€ä¸º .json
                         set filepath_enable=.\%%j
-                        rem ¹Ø±Õ×´Ì¬£¨disable£©Ê±£¬Ê¹ÓÃ¸Ã±äÁ¿£¬ºó×ºÎª .disabled
+                        rem å…³é—­çŠ¶æ€ï¼ˆdisableï¼‰æ—¶ï¼Œä½¿ç”¨è¯¥å˜é‡ï¼Œåç¼€ä¸º .disabled
                         set filepath_disable=!filepath_enable:~0,-5!.disabled
 
-                        rem ¡ıÅĞ¶ÏÎª¿ªÆô
+                        rem â†“åˆ¤æ–­ä¸ºå¼€å¯
                         if '!num_c!' == '1' (
                             if EXIST !filepath_enable! (
                                 ren !filepath_enable! *.disabled
                             ) else (
-                                echo !filepath_enable! ÎÄ¼ş²»´æÔÚ£¬Çë¼ì²é
+                                echo !filepath_enable! æ–‡ä»¶ä¸å­˜åœ¨ï¼Œè¯·æ£€æŸ¥
                             )
-                        rem ¡ıÅĞ¶ÏÎª¹Ø±Õ
+                        rem â†“åˆ¤æ–­ä¸ºå…³é—­
                         ) else if '!num_c!' == '2' (
                             if EXIST !filepath_disable! (
                                 ren !filepath_disable! *.json
                             ) else (
-                                echo !filepath_disable! ÎÄ¼ş²»´æÔÚ£¬Çë¼ì²é
+                                echo !filepath_disable! æ–‡ä»¶ä¸å­˜åœ¨ï¼Œè¯·æ£€æŸ¥
                             )
-                        rem ¡ıÑ­»·ÖĞµÄµÚÒ»´Î²»µ«Òª¸ÄÎÄ¼şºó×º£¬»¹ÒªÅĞ¶Ï¿ª¹Ø×´Ì¬
+                        rem â†“å¾ªç¯ä¸­çš„ç¬¬ä¸€æ¬¡ä¸ä½†è¦æ”¹æ–‡ä»¶åç¼€ï¼Œè¿˜è¦åˆ¤æ–­å¼€å…³çŠ¶æ€
                         ) else if '!num_c!' == '0' (
                             if EXIST !filepath_enable! (
                                 ren !filepath_enable! *.disabled
@@ -127,18 +127,18 @@ if EXIST pack.mcmeta (
                     )
                 )
 
-                rem ÏÔÊ¾³É¹¦²Ù×÷£¬²¢·µ»ØÑ¡Ïî½çÃæ
+                rem æ˜¾ç¤ºæˆåŠŸæ“ä½œï¼Œå¹¶è¿”å›é€‰é¡¹ç•Œé¢
                 if '!num_c!' == '1' (
-                    echo ÒÑ³É¹¦¹Ø±Õ¸ÃÏî
+                    echo å·²æˆåŠŸå…³é—­è¯¥é¡¹
                     pause > nul
                     goto mainSurface
                 ) else if '!num_c!' == '2' (
-                    echo ÒÑ³É¹¦¿ªÆô¸ÃÏî
+                    echo å·²æˆåŠŸå¼€å¯è¯¥é¡¹
                     pause > nul
                     goto mainSurface
-                rem ¡ı´Ë´¦ÎªÒÔ·ÀÍòÒ»
+                rem â†“æ­¤å¤„ä¸ºä»¥é˜²ä¸‡ä¸€
                 ) else (
-                    echo ³öÎÊÌâÁË
+                    echo å‡ºé—®é¢˜äº†
                     echo num_c=!num_c!
                     pause > nul
                     goto end
@@ -146,25 +146,25 @@ if EXIST pack.mcmeta (
             )
         )
 
-        rem Ã»ÕÒµ½¶ÔÓ¦ÎÄ¼ş£¬ÅĞ¶ÏÊäÈëÎŞĞ§
-        echo ÎŞĞ§ÊäÈë£¬ÇëÖØĞÂÊäÈë
+        rem æ²¡æ‰¾åˆ°å¯¹åº”æ–‡ä»¶ï¼Œåˆ¤æ–­è¾“å…¥æ— æ•ˆ
+        echo æ— æ•ˆè¾“å…¥ï¼Œè¯·é‡æ–°è¾“å…¥
         pause > nul
         goto mainSurface
     )
 ) else (
-    echo µ±Ç°Â·¾¶´íÎó¡£
-    echo Çë²é¿´Ê¹ÓÃËµÃ÷£¬²¢½«½ûÓÃÖúÊÖ·ÅÖÁÕıÈ·Î»ÖÃ¡£
+    echo å½“å‰è·¯å¾„é”™è¯¯ã€‚
+    echo è¯·æŸ¥çœ‹ä½¿ç”¨è¯´æ˜ï¼Œå¹¶å°†ç¦ç”¨åŠ©æ‰‹æ”¾è‡³æ­£ç¡®ä½ç½®ã€‚
     pause > nul
 )
 
-rem  --------- ÒÔÏÂÎªº¯Êı ---------
+rem  --------- ä»¥ä¸‹ä¸ºå‡½æ•° ---------
 
-rem  === fun_counting ¿ªÊ¼ ===
-rem  ¹¦ÄÜ£º¼ÆËã×Ö·û´®³¤¶ÈµÄº¯Êı
-rem  ÊäÈë²ÎÊı£º
-rem      countStr ´ı²â×Ö·û´®
-rem  Êä³ö²ÎÊı£º
-rem      count ×Ö·û´®³¤¶È
+rem  === fun_counting å¼€å§‹ ===
+rem  åŠŸèƒ½ï¼šè®¡ç®—å­—ç¬¦ä¸²é•¿åº¦çš„å‡½æ•°
+rem  è¾“å…¥å‚æ•°ï¼š
+rem      countStr å¾…æµ‹å­—ç¬¦ä¸²
+rem  è¾“å‡ºå‚æ•°ï¼š
+rem      count å­—ç¬¦ä¸²é•¿åº¦
 goto end
 :fun_counting
 set /a count=0
@@ -178,16 +178,16 @@ set /a count+=1
 goto counting
 
 :out_of_fun_counting
-rem  === fun_counting ½áÊø ===
+rem  === fun_counting ç»“æŸ ===
 
-rem  === fun_strHead ¿ªÊ¼ ===
-rem  ¹¦ÄÜ£ºÅĞ¶Ï strl µÄ¿ªÍ·ÊÇ²»ÊÇ strs µÄº¯Êı
-rem  ÊäÈë²ÎÊı£º
-rem      strl ³¤×Ö·û´®
-rem      strs ¶Ì×Ö·û´®
-rem  Êä³ö²ÎÊı£º
-rem      isHead Îª 0 Ôò·ñ£¬Îª 1 ÔòÊÇ£¬Îª 2 Ôò strs Îª¿Õ
-rem  fun_strHead ¿ªÊ¼
+rem  === fun_strHead å¼€å§‹ ===
+rem  åŠŸèƒ½ï¼šåˆ¤æ–­ strl çš„å¼€å¤´æ˜¯ä¸æ˜¯ strs çš„å‡½æ•°
+rem  è¾“å…¥å‚æ•°ï¼š
+rem      strl é•¿å­—ç¬¦ä¸²
+rem      strs çŸ­å­—ç¬¦ä¸²
+rem  è¾“å‡ºå‚æ•°ï¼š
+rem      isHead ä¸º 0 åˆ™å¦ï¼Œä¸º 1 åˆ™æ˜¯ï¼Œä¸º 2 åˆ™ strs ä¸ºç©º
+rem  fun_strHead å¼€å§‹
 goto end
 :fun_strHead
 if "!strs!" == "" (
@@ -214,6 +214,6 @@ if !strs_! == !strl_! (
 
 
 :out_of_fun_strHead
-rem  === fun_strHead ½áÊø ===
+rem  === fun_strHead ç»“æŸ ===
 
 :end
