@@ -1,6 +1,6 @@
 * text=auto eol=lf
 
-*.md text eol=lf
-*.svg text eol=lf
-*.txt text eol=lf
-*.bat text eol=lf
+*.md text working-tree-encoding=UTF-8 eol=lf
+*.svg text working-tree-encoding=UTF-8 eol=lf
+*.txt text working-tree-encoding=UTF-8 eol=lf
+*.bat text working-tree-encoding=GBK eol=crlf
