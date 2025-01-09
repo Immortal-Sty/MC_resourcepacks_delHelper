@@ -2,5 +2,5 @@
 
 *.md text working-tree-encoding=UTF-8 eol=lf
 *.svg text working-tree-encoding=UTF-8 eol=lf
-*.txt text working-tree-encoding=UTF-8 eol=lf
+*.txt text working-tree-encoding=UTF-8 eol=crlf
 *.bat text working-tree-encoding=GBK eol=crlf
